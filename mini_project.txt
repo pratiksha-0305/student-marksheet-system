@@ -1,0 +1,39 @@
+while True:
+    name = input("\nEnter Student Name: ")
+    roll_no = input("Enter Roll Number: ")
+
+    sub1 = float(input("Enter marks of English: "))
+    sub2 = float(input("Enter marks of Physics: "))
+    sub3 = float(input("Enter marks of Chemistry: "))
+    sub4 = float(input("Enter marks of Maths: "))
+    sub5 = float(input("Enter marks of Biology: "))
+
+    total = sub1 + sub2 + sub3 + sub4 + sub5
+    percentage = total / 5
+
+    if percentage >= 90:
+        grade = "A+"
+    elif percentage >= 80:
+        grade = "A"
+    elif percentage >= 70:
+        grade = "B"
+    elif percentage >= 60:
+        grade = "C"
+    elif percentage >= 50:
+        grade = "D"
+    else:
+        grade = "Fail"
+
+    print("\n***** STUDENT MARKSHEET *****")
+    print("Student Name :", name)
+    print("Roll Number  :", roll_no)
+    print("Total Marks  :", total)
+    print("Percentage   :", round(percentage, 2), "%")
+    print("Grade        :", grade)
+    print("============================")
+
+    choice = input("\nDo you want to enter another student? (yes/no): ")
+
+    if choice.lower() != "yes":
+        print("Program Ended.")
+        break
